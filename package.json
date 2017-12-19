@@ -1,0 +1,11 @@
+{
+  "name": "easy_pod",
+  "bin": {
+    "ep": "bin/easy_pod.js"
+  },
+  "dependencies": {
+    "js-yaml": "^3.10.0",
+    "shelljs": "^0.7.8",
+    "yargs": "^10.0.3"
+  }
+}
