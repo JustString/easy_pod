@@ -1,6 +1,5 @@
 {
   "name": "easy_pod",
-  "main": "index.js",
   "bin": {
     "ep": "bin/easy_pod.js"
   },
@@ -9,7 +8,7 @@
     "shelljs": "^0.7.8",
     "yargs": "^10.0.3"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "easy config podfile.local for cocoapods develop",
   "devDependencies": {},
   "scripts": {
