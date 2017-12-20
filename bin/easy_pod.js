@@ -14,6 +14,8 @@ createPodfileLocal()
 updatePod()
 
 
+
+
 function initConfig() {
   shell.cd('~')
   try {
@@ -85,6 +87,7 @@ function setupConfig() {
   if (argv._.length == 0 && (argv.w || argv.p)) {
     return false
   }
+  return true
 }
 
 function createPodfileLocal() {
