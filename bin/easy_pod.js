@@ -105,17 +105,24 @@ function createPodfileLocal() {
 
 function updatePod() {
 
-  var updateParams = ['update']
-  if (! argv.update) {
-      updateParams.push('--no-repo-update')
+  if (argv.update) {
+    exec('env PODFILE_TYPE=DEV pod update;open *.xcworkspace')
+  }
+  else {
+    exec('env PODFILE_TYPE=DEV pod update --no-repo-update ;open *.xcworkspace')
   }
 
-  exec('env PODFILE_TYPE=DEV')
-  // 使用 spawn 才可以继承父进程的 stdio 才能有颜色
-  var update = spawn('pod', updateParams, {
-    stdio: 'inherit',
-  })
-  exec("open *.xcworkspace")
+  // var updateParams = ['update']
+  // if (! argv.update) {
+  //     updateParams.push('--no-repo-update')
+  // }
+
+  // exec('env PODFILE_TYPE=DEV')
+  // // 使用 spawn 才可以继承父进程的 stdio 才能有颜色
+  // var update = spawn('pod', updateParams, {
+  //   stdio: 'inherit',
+  // })
+  // exec("open *.xcworkspace")
 }
 
 
